@@ -1,0 +1,17 @@
+def prime_factors(n):
+    factors = set()
+    div = 2
+    while n > 1:
+        while n % div == 0:
+            factors.add(div)
+            n //= div
+        div += 1
+    return factors
+
+num = int(input("Enter a positive integer: "))
+
+if num < 1:
+    print("Please enter a positive integer.")
+else:
+    factors = prime_factors(num)
+    print(f"Prime Factors: {', '.join(map(str, sorted(factors)))}")
