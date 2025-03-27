@@ -1,0 +1,16 @@
+largest = None
+smallest = None
+
+while True:
+    num = int(input("Enter a number (-1 to stop): "))
+    
+    if num == -1:
+        break
+    
+    if largest is None or num > largest:
+        largest = num
+    if smallest is None or num < smallest:
+        smallest = num
+
+if largest is not None and smallest is not None:
+    print(largest, smallest)
