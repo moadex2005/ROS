@@ -1,0 +1,11 @@
+def sum_of_evens(n):
+    evens = [num for num in range(2, n + 1, 2)]
+    return sum(evens), evens
+
+num = int(input("Enter a positive integer: "))
+
+if num < 1:
+    print("Please enter a positive integer.")
+else:
+    total, even_numbers = sum_of_evens(num)
+    print(f"The sum of even numbers from 1 to {num} is {total} ({' + '.join(map(str, even_numbers))}).")
